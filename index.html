@@ -3,28 +3,144 @@
 
     <head>
         <style>
+            body {
+                background-color: rgb(190, 190, 190);
+                margin: 0;
+                overflow-x: hidden;
+            }
+
             .marquee {
-                height: 50px;
+                height: 20vh;
                 overflow: hidden;
                 position: relative;
-                background: #fefefe;
-                color: #333;
-                border: 1px solid #4a4a4a;
             }
             
-            .marquee p {
+            .marquee div {
                 position: absolute;
-                width: 100%;
+                width: 200%;
                 height: 100%;
                 margin: 0;
                 line-height: 50px;
                 text-align: center;
+            }
+
+            .single {
+                -moz-transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+                -moz-animation: scroll-left 3s linear infinite;
+                -webkit-animation: scroll-left 3s linear infinite;
+                animation: scroll-left 30s linear infinite;
+            }
+
+            .double {
                 -moz-transform: translateX(100%);
                 -webkit-transform: translateX(100%);
                 transform: translateX(100%);
                 -moz-animation: scroll-left 2s linear infinite;
                 -webkit-animation: scroll-left 2s linear infinite;
                 animation: scroll-left 20s linear infinite;
+            }
+
+            .tripple {
+                -moz-transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+                -moz-animation: scroll-left 1s linear infinite;
+                -webkit-animation: scroll-left 1s linear infinite;
+                animation: scroll-left 10s linear infinite;
+            }
+
+            .left {
+                margin-top: -100vh;
+            }
+
+            .single-1 {
+                -moz-transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+                -moz-animation: scroll-left 4s linear infinite;
+                -webkit-animation: scroll-left 4s linear infinite;
+                animation: scroll-left 40s linear infinite;
+            }
+
+            .double-1 {
+                -moz-transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+                -moz-animation: scroll-left 5s linear infinite;
+                -webkit-animation: scroll-left 5s linear infinite;
+                animation: scroll-left 50s linear infinite;
+            }
+
+            .tripple-1 {
+                -moz-transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+                -moz-animation: scroll-left 0.7s linear infinite;
+                -webkit-animation: scroll-left 0.7s linear infinite;
+                animation: scroll-left 7s linear infinite;
+            }
+
+            .single-right {
+                -moz-transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+                -moz-animation: scroll-right 3s linear infinite;
+                -webkit-animation: scroll-right 3s linear infinite;
+                animation: scroll-left 30s linear infinite;
+            }
+
+            .double-right {
+                -moz-transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+                -moz-animation: scroll-right 2s linear infinite;
+                -webkit-animation: scroll-right 2s linear infinite;
+                animation: scroll-right 20s linear infinite;
+            }
+
+            .tripple-right {
+                -moz-transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+                -moz-animation: scroll-right 1s linear infinite;
+                -webkit-animation: scroll-right 1s linear infinite;
+                animation: scroll-right 10s linear infinite;
+            }
+
+            .single-1-right {
+                -moz-transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+                -moz-animation: scroll-right 4s linear infinite;
+                -webkit-animation: scroll-right 4s linear infinite;
+                animation: scroll-right 40s linear infinite;
+            }
+
+            .double-1-right {
+                -moz-transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+                -moz-animation: scroll-right 5s linear infinite;
+                -webkit-animation: scroll-right 5s linear infinite;
+                animation: scroll-right 50s linear infinite;
+            }
+
+            .tripple-1-right {
+                -moz-transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+                -moz-animation: scroll-right 0.7s linear infinite;
+                -webkit-animation: scroll-right 0.7s linear infinite;
+                animation: scroll-right 7s linear infinite;
+            }
+
+            img {
+                height: 100%;
+                width: auto;
+                margin: 0;
+                margin-right: -5px;
             }
             
             @-moz-keyframes scroll-left {
@@ -57,12 +173,293 @@
                     transform: translateX(-100%);
                 }
             }
+
+            @-moz-keyframes scroll-right {
+                0% {
+                    -moz-transform: translateX(-100%);
+                }
+                100% {
+                    -moz-transform: translateX(100%);
+                }
+            }
+            
+            @-webkit-keyframes scroll-right {
+                0% {
+                    -webkit-transform: translateX(-100%);
+                }
+                100% {
+                    -webkit-transform: translateX(100%);
+                }
+            }
+            
+            @keyframes scroll-right {
+                0% {
+                    -moz-transform: translateX(-100%);
+                    -webkit-transform: translateX(-100%);
+                    transform: translateX(-100%);
+                }
+                100% {
+                    -moz-transform: translateX(100%);
+                    -webkit-transform: translateX(100%);
+                    transform: translateX(100%);
+                }
+            }
         </style>
     </head>
 
     <body>
         <div class="marquee">
-            <p> Marquee in CSS </p>
+            <div class="single">
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-1.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-2.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-3.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-4.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-5.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-6.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-7.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-8.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-9.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-10.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-11.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-12.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-13.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-14.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-15.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-16.png"/>
+            </div>
+        </div>
+
+        <div class="marquee">
+            <div class="tripple">
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-10.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-11.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-13.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-14.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-1.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-15.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-16.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-4.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-12.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-5.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-6.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-7.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-8.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-2.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-3.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-9.png"/>
+            </div>
+        </div>
+
+        <div class="marquee">
+            <div class="double">
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-4.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-12.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-5.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-6.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-7.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-8.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-2.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-3.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-9.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-10.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-11.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-13.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-14.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-1.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-15.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-16.png"/>
+            </div>
+        </div>
+
+        <div class="marquee">
+            <div class="double-1">
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-4.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-12.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-5.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-6.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-7.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-8.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-2.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-3.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-9.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-10.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-11.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-13.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-14.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-1.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-15.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-16.png"/>
+            </div>
+        </div>
+
+        <div class="marquee">
+            <div class="single-1">
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-1.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-2.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-3.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-4.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-5.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-6.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-7.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-8.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-9.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-10.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-11.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-12.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-13.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-14.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-15.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-16.png"/>
+            </div>
+        </div>
+
+        <div class="marquee">
+            <div class="tripple-1">
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-10.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-11.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-13.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-14.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-1.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-15.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-16.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-4.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-12.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-5.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-6.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-7.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-8.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-2.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-3.png"/>
+                <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-9.png"/>
+            </div>
+        </div>
+
+        <div class="left">
+            <div class="marquee">
+                <div class="single-right">
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-1.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-2.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-3.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-4.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-5.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-6.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-7.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-8.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-9.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-10.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-11.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-12.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-13.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-14.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-15.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-16.png"/>
+                </div>
+            </div>
+
+            <div class="marquee">
+                <div class="tripple-right">
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-10.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-11.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-13.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-14.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-1.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-15.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-16.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-4.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-12.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-5.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-6.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-7.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-8.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-2.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-3.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-9.png"/>
+                </div>
+            </div>
+
+            <div class="marquee">
+                <div class="double-right">
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-4.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-12.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-5.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-6.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-7.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-8.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-2.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-3.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-9.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-10.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-11.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-13.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-14.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-1.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-15.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-16.png"/>
+                </div>
+            </div>
+
+            <div class="marquee">
+                <div class="double-1-right">
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-4.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-12.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-5.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-6.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-7.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-8.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-2.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-3.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-9.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-10.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-11.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-13.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-14.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-1.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-15.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-16.png"/>
+                </div>
+            </div>
+
+            <div class="marquee">
+                <div class="single-1-right">
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-1.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-2.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-3.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-4.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-5.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-6.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-7.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-8.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-9.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-10.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-11.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-12.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-13.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-14.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-15.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-16.png"/>
+                </div>
+            </div>
+
+            <div class="marquee">
+                <div class="tripple-1-right">
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-10.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-11.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-13.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-14.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-1.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-15.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-16.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-4.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-12.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-5.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-6.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-7.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-8.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-2.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-3.png"/>
+                    <img src="https://external-pages.s3.amazonaws.com/external-pages/cropped-yarn/yarn-9.png"/>
+                </div>
+            </div>
         </div>
     </body>
 
